@@ -7,7 +7,7 @@ import java.io.File
 
 data class MusicMetadata(
     val title: String = "",
-    val artist: String = "",
+    val artist: String = "Unknown artist",
     val album: String = "",
     val artwork: Bitmap? = null,
     val duration: Int = 0,
