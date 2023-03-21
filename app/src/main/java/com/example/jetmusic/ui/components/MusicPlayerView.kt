@@ -3,7 +3,6 @@ package com.example.jetmusic.ui.components
 import android.media.MediaPlayer
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.rememberBackdropScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -22,7 +21,7 @@ fun MusicPlayerView(
     }
     var isShuffled = remember { mutableStateOf(!playList.isSorted()) }
     var repeatMode = remember { mutableStateOf(playList.repeatMode) }
-    var isPlaying = remember { mutableStateOf(player.isPlaying)}
+    var isPlaying = remember { mutableStateOf(player.isPlaying) }
 
     Column(
         modifier = Modifier.fillMaxSize()
