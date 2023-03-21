@@ -1,7 +1,7 @@
 package com.example.jetmusic.data
 
 class PlayList(
-    private val urls: Array<String>,
+    private val urls: List<String>,
     var repeatMode: RepeatMode = RepeatMode.NONE
 ) {
     private val indices: MutableList<Int> = urls.indices.toMutableList()
@@ -52,5 +52,9 @@ class PlayList(
 
     fun list(): Array<String> {
         return this.indices.map { this.urls[it] }.toTypedArray()
+    }
+
+    fun size(): Int {
+        return this.urls.size
     }
 }
