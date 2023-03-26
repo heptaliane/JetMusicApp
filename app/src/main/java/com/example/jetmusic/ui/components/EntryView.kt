@@ -9,10 +9,14 @@ fun EntryView(
     manager: PlayListManager,
     onSelect: (PlayListType) -> Unit,
 ) {
-    EntrySelectionList(
-        allPlayList = manager.allPlayList,
-        albumPlayList = manager.albumPlayList,
-        artistPlayList = manager.artistPlayList,
-        onSelect = onSelect
-    )
+    ViewFrame(
+        title = "Choose the playlist type",
+    ) {
+        EntrySelectionList(
+            allPlayList = manager.allPlayList,
+            albumPlayList = manager.albumPlayList,
+            artistPlayList = manager.artistPlayList,
+            onSelect = onSelect
+        )
+    }
 }
