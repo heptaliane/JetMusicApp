@@ -34,7 +34,7 @@ fun getMusicMetadataFromPath(path: String): MusicMetadata {
         duration = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)?.toInt()
             ?: 0,
         track = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_CD_TRACK_NUMBER)
-            ?.toInt(),
+            ?.toIntOrNull() ?: 0,
     )
 }
 
